@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSackDollar, faHouse } from "@fortawesome/free-solid-svg-icons";
-import LandingImage from "../../../Assests/Images/LandView.png";
+import LandingImage from "../../../Assests/Images/LandingView.svg";
 import Dropdown from "../../../Components/Molecules/Dropdown/Dropdown";
 
 const LandView = () => {
@@ -21,21 +21,18 @@ const LandView = () => {
   return (
     <div>
       <div className="relative">
-        <div>
-          <img
-            src={LandingImage}
-            alt=""
-            className="rounded-xl shadow-[0_3px_8px_0px_rgba(0,0,0,0.1)]"
-            height={400}
-            width={"100%"}
-          />
-        </div>
-        <div className="absolute ml-20 bottom-5">
-          <h1 className="mb-3 text-6xl font-bold text-darker ">
-            Find your next <span className="text-gray-800 ">perfect</span>
+        <img
+          src={LandingImage}
+          alt=""
+          className="shadow-[0_3px_8px_0px_rgba(0,0,0,0.1)] w-full"
+          height={400}
+        />
+        <div className="absolute ml-20 bottom-[84px]">
+          <h1 className="mb-5 text-6xl font-bold text-[#ffffff] ">
+            Find your next <span className="text-[#ffffff]">perfect</span>
             <br /> place with ease
           </h1>
-          <div className="mb-8 text-sm text-#404040">
+          <div className="mb-8 text-sm text-[#ffffff]">
             iLot will help you find your home fast, easy and comfortable. <br />
             iLot is completely Secure and Transparent. Let's Start now!
           </div>
@@ -58,10 +55,10 @@ const LandView = () => {
         </div>
       </div>
       <div className="relative flex flex-col mx-20 bottom-28">
-        <div className="box-content flex flex-row cursor-pointer bg-light w-fit rounded-t-xl">
+        <div className="box-content flex flex-row cursor-pointer bg-[#BFBFBF] w-fit rounded-t-xl">
           <div
             className={`px-16 py-4 text-base font-semibold text-gray-500 rounded-t-xl ${
-              toggleBuy && "bg-white"
+              toggleBuy && "bg-white shadow-[3px_8px_3px_0_rgba(0,0,0,0.16)]"
             }`}
             onClick={handleBuy}
           >
@@ -76,7 +73,7 @@ const LandView = () => {
             Rent
           </div>
         </div>
-        <div className="sticky flex flex-row justify-between p-10 bg-white rounded-r-xl rounded-bl-xl drop-shadow-xl">
+        <div className="sticky flex flex-row justify-between p-10 bg-white rounded-r-xl rounded-bl-xl shadow-[0_12px_24px_0_rgba(0,0,0,0.16)]">
           <div className="flex w-[600px] justify-between">
             <div className="flex flex-col">
               <div className="mb-3 text-gray-400">Location</div>
@@ -110,7 +107,7 @@ const LandView = () => {
             </div>
           </div> */}
           <div className="text-center">
-            <button className="py-4 text-white rounded-md bg-primary px-14">
+            <button className="py-4 text-white rounded-md bg-[#A31A21] px-14">
               Search
             </button>
             <div className="text-base text-primary font-semibold hover:underline hover:text-[#5E8EA2] hover:transition-all hover:duration-300 hover:ease-in cursor-pointer">

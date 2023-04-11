@@ -14,7 +14,7 @@ import {
 const Home = () => {
   return (
     <>
-      <div className="mx-12">
+      <div className="w-full">
         <LandView />
         <AppFeatures />
         <div className="flex flex-col my-12">
