@@ -31,8 +31,12 @@ const FormField = ({
     <div
       className={`relative w-full h-10 px-3.5 border border-solid border-[#CCCCCC] rounded-[10px] hover:border-[#ADADAD] hover-shadow-[0_0px_3px_0px_rgba(0,0,0,0.161)] text-sm ${
         error && "border-[#E32B25] hover:border-[#E32B25]"
-      } ${isFocused && "border-[#00A6A2] hover:border-[#00A6A2]"} ${
-        disabled && "border-[#e5e5e5] hover:border-[#e5e5e5]  cursor-none"
+      } ${
+        isFocused && !disabled && "border-[#00A6A2] hover:border-[#00A6A2]"
+      } ${
+        disabled &&
+        isFocused &&
+        "border-[#e5e5e5] hover:border-[#e5e5e5]  cursor-none"
       } ${className}`}
     >
       {label && (
