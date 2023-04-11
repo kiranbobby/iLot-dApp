@@ -34,9 +34,7 @@ const FormField = ({
       } ${
         isFocused && !disabled && "border-[#00A6A2] hover:border-[#00A6A2]"
       } ${
-        disabled &&
-        isFocused &&
-        "border-[#e5e5e5] hover:border-[#e5e5e5]  cursor-none"
+        disabled && "border-[#e5e5e5] hover:border-[#e5e5e5]  cursor-none"
       } ${className}`}
     >
       {label && (

@@ -10,6 +10,7 @@ const PasswordInputLogin = ({
   error,
   maxLength,
   className,
+  eyeButton = true,
   ...props
 }) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -68,16 +69,18 @@ const PasswordInputLogin = ({
           id={id}
           type={isPasswordVisible ? "text" : "password"}
         />
-        <div
-          className="cursor-pointer"
-          onClick={() => setIsPasswordVisible(!isPasswordVisible)}
-        >
-          {isPasswordVisible ? (
-            <FontAwesomeIcon icon={faEye} className={`text-[#737373]`} />
-          ) : (
-            <FontAwesomeIcon icon={faEyeSlash} className={`text-[#737373]`} />
-          )}
-        </div>
+        {eyeButton && (
+          <div
+            className="cursor-pointer"
+            onClick={() => setIsPasswordVisible(!isPasswordVisible)}
+          >
+            {isPasswordVisible ? (
+              <FontAwesomeIcon icon={faEye} className={`text-[#737373]`} />
+            ) : (
+              <FontAwesomeIcon icon={faEyeSlash} className={`text-[#737373]`} />
+            )}
+          </div>
+        )}
       </div>
       <span
         className={`text-[10px] pb-0.5 leading-[14px] -bottom-[18px] absolute left-3 truncate font-normal 
