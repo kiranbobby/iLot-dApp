@@ -68,7 +68,7 @@ const TextField = ({
         onChange={handleChange}
         maxLength={charLimit}
         className={`w-full h-full font-semibold resize-none border border-solid border-[#cccccc] rounded-[10px] leading-normal text-sm text-[#404040] hover:border-[#adadad] p-3.5 transition-all ease-in duration-100hover:shadow-[0_0_3px_0_rgba(0,0,0,0.161)] focus:outline-none  ${
-          isFocused && "focus:border-[#00A6A2] focus:hover:border-[#00A6A2]"
+          isFocused && "focus:border-[#295D93] focus:hover:border-[#295D93]"
         } ${error && "border-[#E32B25] hover:border-[#E32B25]"} ${
           disabled && "border-[#e5e5e5] pointer-events-none"
         }`}

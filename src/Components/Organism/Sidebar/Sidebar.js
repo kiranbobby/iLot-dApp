@@ -1,5 +1,5 @@
 import React from "react";
-import guestIcon2 from "../../../Assests/Images/Guest-Icon-2.svg";
+import guestIcon from "../../../Assests/Images/Guest-Icon.svg";
 import { showLoginModal } from "../../../Store/ducks/loginModal";
 import { useDispatch } from "react-redux";
 import { SidebarNavButton } from "../../Atom";
@@ -41,17 +41,17 @@ const Sidebar = () => {
   return (
     <div className={`w-[343px] h-full flex flex-col justify-between`}>
       <div>
-        <div className={`h-[136px] bg-[#F2F3F8] rounded-b-[20px]`}>
+        <div className={`h-[136px] bg-[#FBE8E9] rounded-b-[20px]`}>
           <div className={"px-4 py-9 flex items-center justify-between"}>
             <div className={`flex items-center gap-2`}>
-              <img src={guestIcon2} alt="" className={`w-16 h-16`} />
+              <img src={guestIcon} alt="" className={`w-16 h-16`} />
               <div className={`text-2xl font-semibold text-[#404040]`}>
                 Guest User
               </div>
             </div>
             <button
               type="button"
-              className="px-4 py-2 font-serif font-semibold text-white rounded-md bg-primary"
+              className="px-4 py-2 font-serif font-semibold text-white rounded-md bg-[#D7222C] hover:bg-[#A31A21]"
               onClick={handleClick}
             >
               LOGIN
@@ -69,7 +69,7 @@ const Sidebar = () => {
           ))}
         </div>
       </div>
-      <div className="bg-[#F2F3F8] p-6 rounded-t-[20px]">
+      <div className="bg-[#FBE8E9] p-6 rounded-t-[20px]">
         <div
           className={`font-semibold text-#404040 text-[20px] text-center mb-5`}
         >
