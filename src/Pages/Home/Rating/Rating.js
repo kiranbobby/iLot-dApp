@@ -60,13 +60,13 @@ const Rating = () => {
     <div className="mt-[275px]">
       <div className="flex items-center justify-center">
         <h1 className="mb-12 text-4xl font-bold text-darker">
-          What people Said about us
+          What People Said About Us
         </h1>
       </div>
       <Slider {...settings} arrows={false}>
         {ratings.map((rating) => (
           <div className={`${style.slickCustom}`}>
-            <div className="flex w-5/6 h-48 py-5 pl-8 text-sm bg-white rounded-lg hover:drop-shadow-md ">
+            <div className="flex w-5/6 h-48 py-5 pl-8 text-sm border rounded-lg shadow-[0_8px_6px_0px_rgba(0,0,0,0.16)] mb-5  ">
               <div className="mr-6 text-6xl text-gray-300">
                 <FontAwesomeIcon icon={faQuoteLeft} />
               </div>
