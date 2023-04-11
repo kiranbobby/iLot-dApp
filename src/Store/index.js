@@ -3,10 +3,12 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import loginModal from "./ducks/loginModal";
 import swipeableDrawer from "./ducks/swipeableDrawer";
+import createAccountModal from "./ducks/CreateAccountModal";
 
 const reducers = combineReducers({
   loginModal,
   swipeableDrawer,
+  createAccountModal,
 });
 
 const rootReducer = (state, action) => {

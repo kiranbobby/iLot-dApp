@@ -5,3 +5,4 @@ export { default as SidebarNavButton } from "./SidebarNavButton/SidebarNavButton
 export { default as FormField } from "./FormField/FormField";
 export { default as PasswordInputLogin } from "./PasswordInputLogin/PasswordInputLogin";
 export { default as TextField } from "./TextField/TextField";
+export { default as LoginButton } from "./LoginButton/LoginButton";
