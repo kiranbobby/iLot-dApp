@@ -1,6 +1,7 @@
 import LandView from "./LandView/LandView";
 import AppFeatures from "./AppFeatures/AppFeatures";
 import FeaturedProperty from "./FeaturesProperty/FeatureProperty";
+import Inspotlight from "./Inspotlight/Inspotlight";
 import Rating from "./Rating/Rating";
 import f3 from "../../Assests/Images/f3.png";
 import f2 from "../../Assests/Images/f2.png";
@@ -14,12 +15,24 @@ import {
 const Home = () => {
   return (
     <>
-      <div className="mx-12">
+      <div className="w-full">
         <LandView />
-        <AppFeatures />
+
         <div className="flex flex-col my-12">
           <div className="flex flex-col items-center justify-center">
-            <h1 className="mb-5 text-4xl font-bold text-darker">
+            <h1 className="mb-5 text-6xl font-bold text-darker">
+              In Spotlight
+            </h1>
+            <h2 className="text-base font-medium text-gray-500">
+              Find your best place to live with us.
+            </h2>
+          </div>
+        </div>
+
+        <Inspotlight />
+        <div className="flex flex-col my-12">
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="mb-5 text-6xl font-bold text-darker">
               Discover Our Featured Properties
             </h1>
             <h2 className="text-base font-medium text-gray-500">
@@ -28,6 +41,8 @@ const Home = () => {
           </div>
         </div>
         <FeaturedProperty />
+
+        <AppFeatures />
 
         <div className="static flex flex-row items-center justify-center my-20">
           <div className="relative flex w-9/12 mb-96 ">

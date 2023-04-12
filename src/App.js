@@ -12,17 +12,19 @@ import MySession from "./Pages/UserProfile/MySession/MySession";
 import ListedProperties from "./Pages/UserProfile/ListedProperties/ListedProperties";
 import SavedProperties from "./Pages/UserProfile/SavedProperties/SavedProperties";
 import ContactedProperties from "./Pages/UserProfile/ContactedProperties/ContactedProperties";
+import CreateAccountModal from "./Components/Molecules/CreateAccountModal/CreateAccountModal";
 
 function App() {
   const Modals = () => (
     <>
       <LoginModal />
+      <CreateAccountModal />
     </>
   );
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/properties" element={<Properties />} />

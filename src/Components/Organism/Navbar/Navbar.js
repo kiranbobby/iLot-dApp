@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-row content-center justify-between px-12 py-5 text-lg ">
+    <div className="flex flex-row content-center justify-between px-12 py-5 text-lg w-full bg-[#fff] sticky top-0 z-30">
       <div className="flex flex-row items-center text-5xl font-bold text-darker">
         <img src={logo} alt="logo" className={`w-20 h-20`} />
         <div className="pl-2 text-orange-600">iLot</div>
@@ -65,7 +65,7 @@ const Navbar = () => {
           <img
             src={userIcon}
             alt=""
-            className={`cursor-pointer`}
+            className={`cursor-pointer h-[100%] w-[106px]`}
             onClick={handleToggle}
           />
           <SwipeableDrawer open={show} anchor="right" onClose={handleClose}>
