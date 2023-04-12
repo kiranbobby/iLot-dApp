@@ -97,7 +97,7 @@ const FeaturedProperty = () => {
   };
 
   return (
-    <div className="">
+    <div >
       <Slider {...settings} arrows={false}>
         {properties.map((property) => (
           <div className={`${style.slickCustom}`}>
