@@ -1,5 +1,5 @@
 import React from "react";
-import contactBanner from "../../Assests/Images/contact-banner.svg";
+import contactBanner from "../../Assests/Images/contact-banner-1.png";
 import phoneIcon from "../../Assests/Images/viber.svg";
 import mailIcon from "../../Assests/Images/email.svg";
 import shareIcon from "../../Assests/Images/share.svg";
@@ -16,7 +16,7 @@ const Contact = () => {
           alt=""
           className="shadow-[0_3px_8px_0px_rgba(0,0,0,0.1)] w-full"
         />
-        <div className="absolute ml-20 top-[120px]">
+        <div className="absolute ml-20 top-5">
           <div className={`font-bold text-[76px] text-[#fff] mb-5`}>
             Contact Us
           </div>
