@@ -25,7 +25,7 @@ const SearchInput = ({
           styles.inputContainer
         } bg-[#fff]  ${shadow && `${styles.shadow}`} ${
           hoverEffect &&
-          `hover:border hover:border-solid hover:border-[#295D93]`
+          `hover:border hover:border-solid hover:border-[#ADADAD] hover:shadow-[0_0_3px_0_rgba(0,0,0,0.161)] hover:transition-all hover:ease-in hover:duration-300 `
         } ${
           error &&
           `border border-solid border-[#E32B25] focus-within:border-[#E32B25]`
@@ -40,11 +40,11 @@ const SearchInput = ({
           {...props}
         />
 
-        <button
+        {/* <button
           type="button"
           onClick={onIconClick}
           className={`icon-search flex flex-col justify-center text-[#404040] pr-3.5 cursor-pointer ${classIcon}`}
-        ></button>
+        ></button> */}
       </div>
 
       <p
