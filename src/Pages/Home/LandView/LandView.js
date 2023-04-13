@@ -79,7 +79,7 @@ const LandView = () => {
               <div className="flex flex-col">
                 <div className="mb-3 text-gray-400">Location</div>
                 <div className="text-sm font-semibold text-night w-[300px]">
-                  <FormSelectZone option={location} />
+                  <FormSelectZone options={location} />
                 </div>
               </div>
               <div className="flex flex-col">
