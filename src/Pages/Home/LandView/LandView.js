@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSackDollar, faHouse } from "@fortawesome/free-solid-svg-icons";
 import LandingImage from "../../../Assests/Images/LandingView.png";
 import Dropdown from "../../../Components/Molecules/Dropdown/Dropdown";
+import { FormSelectZone, SearchInput } from "../../../Components/Atom";
 
 const LandView = () => {
   const [toggleBuy, setToggleBuy] = useState(true);
@@ -74,45 +75,42 @@ const LandView = () => {
             </div>
           </div>
           <div className="sticky flex flex-row justify-between p-10 bg-white rounded-r-xl rounded-bl-xl shadow-[0_12px_24px_0_rgba(0,0,0,0.16)]">
-            <div className="flex w-[600px] justify-between">
+            <div className="flex w-[700px] justify-between">
               <div className="flex flex-col">
                 <div className="mb-3 text-gray-400">Location</div>
-                <div className="text-sm font-semibold text-night">
-                  <Dropdown option={location} />
+                <div className="text-sm font-semibold text-night w-[300px]">
+                  <FormSelectZone option={location} />
                 </div>
               </div>
               <div className="flex flex-col">
                 <div className="mb-3 text-gray-400">Property Type</div>
-                <div className="text-sm font-semibold text-night">
-                  <Dropdown option={type} />
+                <div className="text-sm font-semibold text-night w-[300px]">
+                  <FormSelectZone options={type} />
                 </div>
               </div>
             </div>
             <div className="flex flex-col w-[600px]">
               <div className="mb-3 text-gray-400 ">Keyword</div>
               <div className="text-sm font-semibold text-night">
-                <input
-                  type="text"
+                <SearchInput
+                  border={true}
+                  maxLength={255}
+                  hoverEffect={true}
+                  // className={`w-[300px]`}
                   placeholder="Search for locality, landmark, project, or builder"
-                  className="border w-[600px] border-[#d3deed] rounded-md h-8 hover:border-[#1D86BE] hover:transition-all hover:duration-300 hover:ease-in hover:cursor-pointer"
-                  name="keyword"
-                  id="keyword"
                 />
               </div>
             </div>
             {/* <div className="flex flex-col">
-            <div className="mb-3 text-gray-400">Property Price Range</div>
-            <div className="text-xl font-bold text-night">
-              $85,000 - $98,000
-            </div>
-          </div> */}
-            <div className="text-center">
-              <button className="py-4 text-white rounded-md bg-[#A31A21] px-14">
+              <div className="mb-3 text-gray-400">Property Price Range</div>
+              <div className="text-xl font-bold text-night">
+                $85,000 - $98,000
+              </div>
+            </div> */}
+            <div className="flex items-end">
+              <button className="py-4 text-white font-semibold rounded-2xl bg-[#D7222C] hover:bg-[#A31A21] px-14">
                 Search
               </button>
-              <div className="text-base text-primary font-semibold hover:underline hover:text-[#5E8EA2] hover:transition-all hover:duration-300 hover:ease-in cursor-pointer">
-                Advanced search
-              </div>
             </div>
           </div>
         </div>

@@ -7,3 +7,4 @@ export { default as PasswordInputLogin } from "./PasswordInputLogin/PasswordInpu
 export { default as TextField } from "./TextField/TextField";
 export { default as LoginButton } from "./LoginButton/LoginButton";
 export { default as FormSelectZone } from "./FormSelectZone/FormSelectZone";
+export { default as SearchInput } from "./SearchInput/SearchInput";

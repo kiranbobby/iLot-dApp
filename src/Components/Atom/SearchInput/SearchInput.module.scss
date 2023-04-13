@@ -1,0 +1,17 @@
+.inputContainer {
+    &:focus-within {
+      border: 1px solid #295D93;
+    }
+  }
+  
+  .shadow {
+    box-shadow: 0 2px 2px 0 #00000026;
+  }
+  
+  .form_input {
+    &::placeholder {
+      font-size: 14px;
+      color: #767676;
+      font-style: italic;
+    }
+  }
