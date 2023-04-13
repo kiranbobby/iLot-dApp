@@ -97,11 +97,11 @@ const FeaturedProperty = () => {
   };
 
   return (
-    <div >
+    <div className="">
       <Slider {...settings} arrows={false}>
         {properties.map((property) => (
-          <div className={`${style.slickCustom}`}>
-            <div className="relative mx-3 bg-white border border-gray-400 rounded-lg h-fit hover:drop-shadow-xl ">
+          <div className={`${style.slickCustom} mb-6`}>
+            <div className="relative mx-3 bg-white rounded-lg h-fit drop-shadow-xl ">
               <div className="z-0 m-0 w-fit">
                 <img
                   className="rounded-t-lg"
