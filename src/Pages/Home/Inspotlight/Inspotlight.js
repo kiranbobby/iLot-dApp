@@ -44,17 +44,17 @@ const Inspotlight = () => {
     <div>
       <Slider {...settings} arrows={false}>
         {properties.map((property) => (
-        <div className={`${style.slickCustom}`}>
-          <div className="relative flex mx-5">
+        <div className={`${style.slickCustom} my-4 group rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-400`}>
+          <div className="relative flex]">
             <img
-              className="rounded-lg w-[874px] h-[535px] backdrop-blur-sm bg-[#767676] "
+              className="rounded-lg w-[874px] h-[535px] backdrop-blur-sm bg-[#767676]"
               src={property.propertyImage}
               alt={property.propAlt}
             />
             <img
                 src={sticker}
                 alt={sticker}
-                className="absolute top-0 w-[398px] h-[233px]"
+                className="absolute top-0 w-[398px] h-[233px] group-hover:scale-105"
             />
             <div className="absolute top-0 p-3">
               <div className="flex flex-row">
@@ -83,7 +83,7 @@ const Inspotlight = () => {
                 <p className="text-[#10618C] underline cursor-pointer"> Projects </p>
               </div>
             </div>
-            <div className="flex flex-row items-center justify-between absolute bottom-0 h-[132px] w-[874px] bg-gradient-to-t from-black to-black/10 px-4">
+            <div className="rounded-b-xl flex flex-row items-center justify-between absolute bottom-0 h-[132px] w-[874px] bg-gradient-to-t from-black to-black/10 px-4">
               <div className="flex flex-row text-[#fff]">
                 <div className="pr-3 border-r-4 border-white">
                   <h1 className="text-2xl font-semibold"> CBRE Building </h1>
@@ -94,7 +94,7 @@ const Inspotlight = () => {
                   <p className="text-lg font-medium"> 2,3 BHK Apartments</p>
                 </div>
               </div>
-              <button className="bg-[#F02601] text-[#fff] w-[120px] h-[56px] rounded-xl text-xl"> Contact </button>
+              <button className="bg-[#A31A21] text-[#fff] w-[120px] h-[56px] rounded-xl text-xl"> Contact </button>
             </div>
           </div>
           </div>

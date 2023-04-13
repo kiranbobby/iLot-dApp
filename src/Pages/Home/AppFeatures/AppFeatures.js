@@ -36,9 +36,9 @@ const AppFeatures = () => {
   ]);
 
   return (
-    <div className="flex justify-between gap-12 ">
+    <div className="flex justify-between gap-12 bg-[#D7222C] bg-opacity-10">
       {options.map((option) => (
-        <div className="box-content px-6 py-8 bg-white cursor-pointer hover:drop-shadow-lg rounded-xl shadow-[0_3px_8px_0px_rgba(0,0,0,0.1)]">
+        <div className="box-content px-6 py-8 my-10 bg-white cursor-pointer hover:drop-shadow-lg rounded-xl shadow-[0_3px_8px_0px_rgba(0,0,0,0.1)]">
           <div className="flex items-center mb-3 w-52">
             <p className="px-3 py-2 mr-4 text-2xl text-white rounded-lg bg-primary">
               {option.icon}

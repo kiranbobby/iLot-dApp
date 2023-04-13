@@ -19,7 +19,7 @@ const Home = () => {
         <LandView />
 
         <div className="flex flex-col my-12">
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-start justify-center mx-20">
             <h1 className="mb-5 text-6xl font-bold text-darker">
               In Spotlight
             </h1>
