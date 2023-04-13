@@ -6,3 +6,4 @@ export { default as FormField } from "./FormField/FormField";
 export { default as PasswordInputLogin } from "./PasswordInputLogin/PasswordInputLogin";
 export { default as TextField } from "./TextField/TextField";
 export { default as LoginButton } from "./LoginButton/LoginButton";
+export { default as FormSelectZone } from "./FormSelectZone/FormSelectZone";

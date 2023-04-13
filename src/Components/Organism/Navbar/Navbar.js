@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../../Assests/Images/logo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import userIcon from "../../../Assests/Images/User-Icon.svg";
 import { SwipeableDrawer } from "@mui/material";
 import Sidebar from "../Sidebar/Sidebar";
@@ -11,6 +11,7 @@ import {
 } from "../../../Store/ducks/swipeableDrawer";
 
 const Navbar = () => {
+  const navigateTo = useNavigate();
   const dispatch = useDispatch();
   const { show } = useSelector((store) => store.swipeableDrawer);
   let Links = [
@@ -29,7 +30,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-row content-center justify-between px-12 py-5 text-lg  bg-[#fff] sticky top-0 z-50">
+    <div className="flex flex-row content-center justify-between px-12 py-5 text-lg  bg-[#fff] sticky top-0 z-30">
       <div className="flex flex-row items-center text-5xl font-bold text-darker">
         <img src={logo} alt="logo" className={`w-20 h-20`} />
         <div className="pl-2 text-orange-600">iLot</div>
@@ -49,7 +50,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="flex items-center gap-8">
-        <div className="px-4 py-2">
+        <div className="px-4 py-2" onClick={() => navigateTo("/list-property")}>
           <span
             className={`font-semibold text-gray-600 rounded-md cursor-pointer hover:text-gray-800 hover:underline hover:decoration-2 hover:underline-offset-8 hover:transition-all hover:duration-300 hover:ease-in`}
           >

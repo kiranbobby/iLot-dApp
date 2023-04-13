@@ -1,0 +1,25 @@
+.options_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 211px;
+    overflow: auto;
+    padding-top: 4px;
+    scrollbar-width: none;
+  
+    /* width */
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+    }
+  
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #fff;
+    }
+  
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #767676;
+    }
+  }

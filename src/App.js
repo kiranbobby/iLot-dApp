@@ -13,6 +13,7 @@ import ListedProperties from "./Pages/UserProfile/ListedProperties/ListedPropert
 import SavedProperties from "./Pages/UserProfile/SavedProperties/SavedProperties";
 import ContactedProperties from "./Pages/UserProfile/ContactedProperties/ContactedProperties";
 import CreateAccountModal from "./Components/Molecules/CreateAccountModal/CreateAccountModal";
+import ListingProperties from "./Pages/ListingProperties/ListingProperties";
 
 function App() {
   const Modals = () => (
@@ -24,12 +25,13 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <Navbar />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/properties" element={<Properties />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/list-property" element={<ListingProperties />} />
 
           {/* User Profile routes */}
           <Route path="/user-profile" element={<UserProfile />}>
