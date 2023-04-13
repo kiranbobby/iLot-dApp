@@ -9,9 +9,12 @@ import {
   hideSwipeableDrawer,
   showSwipeableDrawer,
 } from "../../../Store/ducks/swipeableDrawer";
+import styles  from './Navbar.module.scss';
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const navigateTo = useNavigate();
+  const [navState, setNavState] = useState('');
   const dispatch = useDispatch();
   const { show } = useSelector((store) => store.swipeableDrawer);
   let Links = [
@@ -29,6 +32,12 @@ const Navbar = () => {
     dispatch(hideSwipeableDrawer());
   };
 
+  useEffect(()=>{
+    if(navState === ''){
+      setNavState(0);
+    }
+  },[navState])
+  
   return (
     <div className="flex flex-row content-center justify-between px-12 py-5 text-lg  bg-[#fff] sticky top-0 z-30">
       <div className="flex flex-row items-center text-5xl font-bold text-darker">
@@ -37,15 +46,20 @@ const Navbar = () => {
       </div>
       <div className="flex items-center">
         <ul className={"flex items-center text-xl "}>
-          {Links.map((link) => (
+          {Links.map((link,id) => (
             <li key={link.link} className="">
               <NavLink
-                className={`[&.active]:bg-primary [&.active]:text-white px-4 py-2 mx-5 font-bold text-gray-600 rounded-xl tracking-[0.45px] [&.active]:shadow-[0_3px_8px_0px_rgba(0,0,0,0.1)] hover:text-gray-800 `}
+                className={`group px-5 py-2 mx-5 font-bold text-gray-600 tracking-[0.45px]  hover:text-gray-800 flex flex-col justify-between`}
                 to={link.link}
+                onClick={() => (setNavState(id))}
               >
                 {link.name}
+                <div 
+                  className={`${id === navState ? "border-[#A31A21] w-[120%] -ml-[11%] mt-[2px] border-solid border-[2.5px] rounded h-[3px]" : `${styles.animate} -ml-[11%] mt-[2px] group-hover:w-[120%] group-hover:border-solid group-hover:border-[2.5px] group-hover:border-[#A31A21] group-hover:delay-50`} ` }
+                  ></div>
               </NavLink>
             </li>
+            
           ))}
         </ul>
       </div>
