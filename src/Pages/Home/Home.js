@@ -67,14 +67,14 @@ const Home = () => {
               </p>
             </div>
             <div className="box-content flex flex-row justify-between my-10 text-xl text-white w-72">
-              <p className="px-4 py-3 rounded-lg cursor-pointer bg-primary">
+              <p className="px-4 py-3 rounded-lg cursor-pointer bg-brick1">
                 <FontAwesomeIcon icon={faCalendarCheck} />
               </p>
-              <div className="flex flex-row items-center px-4 py-3 rounded-lg cursor-pointer bg-primary">
+              <div className="flex flex-row items-center px-4 py-3 rounded-lg cursor-pointer bg-brick1">
                 <FontAwesomeIcon icon={faClock} />
                 <p className="ml-2 text-sm">24 H Consultant</p>
               </div>
-              <p className="px-4 py-3 rounded-lg cursor-pointer bg-primary">
+              <p className="px-4 py-3 rounded-lg cursor-pointer bg-brick1">
                 <FontAwesomeIcon icon={faSuitcase} />
               </p>
             </div>

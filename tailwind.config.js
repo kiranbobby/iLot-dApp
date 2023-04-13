@@ -8,6 +8,7 @@ module.exports = {
         dark: "#31515E",
         darker: "#1A3D4B",
         light: "#B9D5DE",
+        brick1: "#A31A21",
       },
       dropShadow: {
         "3xl": "0 35px 35px rgba(0, 0, 0, 0.25)",
