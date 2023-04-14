@@ -9,12 +9,12 @@ import {
   hideSwipeableDrawer,
   showSwipeableDrawer,
 } from "../../../Store/ducks/swipeableDrawer";
-import styles  from './Navbar.module.scss';
+import styles from "./Navbar.module.scss";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const navigateTo = useNavigate();
-  const [navState, setNavState] = useState('');
+  const [navState, setNavState] = useState("");
   const dispatch = useDispatch();
   const { show } = useSelector((store) => store.swipeableDrawer);
   let Links = [
@@ -32,12 +32,12 @@ const Navbar = () => {
     dispatch(hideSwipeableDrawer());
   };
 
-  useEffect(()=>{
-    if(navState === ''){
+  useEffect(() => {
+    if (navState === "") {
       setNavState(0);
     }
-  },[navState])
-  
+  }, [navState]);
+
   return (
     <div className="flex flex-row content-center justify-between px-12 py-5 text-lg  bg-[#fff] sticky top-0 z-30">
       <div className="flex flex-row items-center text-5xl font-bold text-darker">
@@ -46,35 +46,53 @@ const Navbar = () => {
       </div>
       <div className="flex items-center">
         <ul className={"flex items-center text-xl "}>
-          {Links.map((link,id) => (
-            <li key={link.link} className="">
+          {Links.map((link, id) => (
+            <li key={link.link} className="group px-5">
               <NavLink
-                className={`group px-5 py-2 mx-5 font-bold text-gray-600 tracking-[0.45px]  hover:text-gray-800 flex flex-col justify-between`}
+                className="py-2 mx-5 font-bold text-gray-600 tracking-[0.45px]  hover:text-gray-800 flex flex-col justify-between"
                 to={link.link}
-                onClick={() => (setNavState(id))}
+                onClick={() => setNavState(id)}
               >
                 {link.name}
-                <div 
-                  className={`${id === navState ? "border-[#A31A21] w-[120%] -ml-[11%] mt-[2px] border-solid border-[2.5px] rounded h-[3px]" : `${styles.animate} -ml-[11%] mt-[2px] group-hover:w-[120%] group-hover:border-solid group-hover:border-[2.5px] group-hover:border-[#A31A21] group-hover:delay-50`} ` }
-                  ></div>
               </NavLink>
+              <div
+                className={`${
+                  id === navState
+                    ? "border-[#A31A21] w-[100%] border-solid border-[2px] rounded h-[3px]"
+                    : `${styles.animate} group-hover:w-[100%] group-hover:border-solid group-hover:border-[2px] group-hover:border-[#A31A21] group-hover:delay-50`
+                } `}
+              ></div>
             </li>
-            
           ))}
         </ul>
       </div>
       <div className="flex items-center gap-8">
-        <div className="px-4 py-2" onClick={() => navigateTo("/list-property")}>
-          <span
-            className={`font-semibold text-gray-600 rounded-md cursor-pointer hover:text-gray-800 hover:underline hover:decoration-2 hover:underline-offset-8 hover:transition-all hover:duration-300 hover:ease-in`}
+        <div className="group flex flex-col">
+          <div
+            className="px-4 py-2"
+            onClick={() => {
+              navigateTo("/list-property");
+              setNavState(4);
+            }}
           >
-            List Property
-          </span>
-          <span
-            className={`ml-1 text-[10px] text-white font-semibold bg-red-500 p-0.5 rounded-lg`}
-          >
-            free
-          </span>
+            <span
+              className={"cursor-pointer text-gray-800 font-semibold"}
+            >
+              List Property
+            </span>
+            <span
+              className={`ml-1 text-[10px] text-white font-semibold bg-red-500 p-0.5 rounded-lg`}
+            >
+              free
+            </span>
+          </div>
+          <div
+            className={`${
+              navState === 4
+                ? "border-[#A31A21] w-[100%] border-solid border-[2px] rounded h-[3px]"
+                : `${styles.animate} group-hover:w-[100%] group-hover:border-solid group-hover:border-[2px] group-hover:border-[#A31A21] group-hover:delay-50`
+            } `}
+          ></div>
         </div>
         <div>
           <img

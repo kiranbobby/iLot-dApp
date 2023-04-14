@@ -50,7 +50,7 @@ const FormField = ({
             ? "text-[#ADADAD] pointer-events-none"
             : labelTop
             ? "text-[#404040]"
-            : "text-[#767676]"
+            : "text-[#13182A]"
         }`}
           htmlFor={id}
         >
