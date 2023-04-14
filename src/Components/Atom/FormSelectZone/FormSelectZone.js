@@ -18,7 +18,7 @@ const FormSelectZone = ({
     { value: "Option 3", label: "Option 3" },
   ],
   value = {},
-  onChange = () => {},
+  onChange,
   onBlur = () => {},
   ...props
 }) => {
@@ -84,12 +84,12 @@ const FormSelectZone = ({
           {label}
         </div>
         <div
-          className={`w-[95%] h-[38px] text-sm font-semibold flex item-center  ${
+          className={`w-[95%] h-[38px] text-sm font-semibold flex items-center ${
             selectedOption?.label?.length > 25 ? "text-[10px]" : "text-sm"
           }  ${disabled ? "text-[#ADADAD]" : "text-[#404040]"}`}
           onClick={() => setIsActive(!isActive)}
         >
-          {selectedOption?.label || ""}
+          {selectedOption?.label || ''}
         </div>
         {!disabled && (
           <img

@@ -8,6 +8,8 @@ import { FormSelectZone, SearchInput } from "../../../Components/Atom";
 const LandView = () => {
   const [toggleBuy, setToggleBuy] = useState(true);
   const [toggleRent, setToggleRent] = useState(false);
+  const [propertyType, setPropertyType] = useState("");
+  const [country, setCountry] = useState("")
 
   const handleBuy = () => {
     setToggleBuy(true);
@@ -79,13 +81,14 @@ const LandView = () => {
               <div className="flex flex-col">
                 <div className="mb-3 text-gray-400">Location</div>
                 <div className="text-sm font-semibold text-night w-[300px]">
-                  <FormSelectZone options={location} />
+                  <FormSelectZone value={country} options={location} label={"Country"} onChange={(option)=>(setCountry(option))} />
                 </div>
               </div>
               <div className="flex flex-col">
                 <div className="mb-3 text-gray-400">Property Type</div>
                 <div className="text-sm font-semibold text-night w-[300px]">
-                  <FormSelectZone options={type} />
+                  <FormSelectZone  value={propertyType} options={type} label={"Property Type"} onChange={(option)=>
+                    setPropertyType(option) } />
                 </div>
               </div>
             </div>
